@@ -1,0 +1,62 @@
+<div class="edit-contact-container">
+  <div class="card shadow p-4 edit-contact-card">
+    <h4 class="card-title mb-4 text-center">Edit Contact</h4>
+    <div class="mb-3">
+      <label for="firstName" class="form-label">First Name</label>
+      <input
+        [(ngModel)]="firstName"
+        type="text"
+        id="firstName"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input
+        [(ngModel)]="lastName"
+        type="text"
+        id="lastName"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone Number</label>
+      <input
+        [(ngModel)]="phoneNumber"
+        type="text"
+        id="phone"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input
+        type="text"
+        id="email"
+        class="form-control"
+        required
+        [(ngModel)]="email"
+      />
+    </div>
+
+    <div class="d-flex justify-content-end gap-2 mt-4">
+      <button
+        type="submit"
+        class="btn btn-primary"
+        routerLink=""
+        (click)="updateContact()"
+      >
+        Submit Changes
+      </button>
+      <button type="button" class="btn btn-primary" (click)="goList()">
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>

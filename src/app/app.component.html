@@ -1,1 +1,16 @@
-<div>Hello World!</div>
+<div class="container">
+  <nav
+    class="navbar navbar-expand-lg bg-light border rounded shadow-sm px-4 mt-3"
+  >
+    <div
+      class="container-fluid d-flex justify-content-between align-items-center"
+    >
+      <a class="navbar-brand fs-3 fw-bold" routerLink="">Contact Manager</a>
+      <div class="d-flex gap-2">
+        <button class="btn btn-primary" (click)="goAdd()">Add Contact</button>
+        <button class="btn btn-primary" (click)="goList()">Show List</button>
+      </div>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

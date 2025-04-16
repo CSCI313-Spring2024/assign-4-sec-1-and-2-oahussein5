@@ -1,0 +1,10 @@
+.edit-contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.edit-contact-card {
+  min-width: 400px;
+}

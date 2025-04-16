@@ -1,0 +1,25 @@
+<div class="container mt-5">
+  <div class="d-flex flex-column align-items-center">
+    <div class="card contact-card" *ngFor="let c of contact; let i = index">
+      <div class="card-body text-center">
+        <h5 class="card-title">{{ c.firstName }} {{ c.lastName }}</h5>
+        <p class="card-text mb-3">
+          {{ c.phoneNumber }}<br />
+          {{ c.email }}
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+          <button type="button" class="btn btn-primary" (click)="goEdit(i)">
+            Edit
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="deleteContact(i)"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
