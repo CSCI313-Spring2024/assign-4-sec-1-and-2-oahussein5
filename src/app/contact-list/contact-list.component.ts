@@ -6,7 +6,7 @@ import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-contact-list',
-  imports: [RouterLink, NgFor],
+  imports: [NgFor],
   templateUrl: './contact-list.component.html',
   styleUrl: './contact-list.component.css',
 })
@@ -14,7 +14,6 @@ export class ContactListComponent implements OnInit {
   dataService = inject(DataService);
 
   contact: Contact[] = [];
-  editId: number = -1;
 
   ngOnInit(): void {
     this.contact = this.dataService.contact;
@@ -23,7 +22,6 @@ export class ContactListComponent implements OnInit {
   constructor(private router: Router) {}
 
   goEdit(id: number): void {
-    this.editId = id;
     this.router.navigate(['/edit', id]);
   }
 
